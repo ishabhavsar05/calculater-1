@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        text-align: center;
+        font-size: 60px;
+        color: teal;
+      }
+
+      #calculator {
+        height: 500px;
+        width: 400px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        margin: auto;
+        padding: 40px;
+        border-radius: 30px;
+      }
+
+      #display {
+        height: 60px;
+        width: 100%;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        margin: auto;
+        border-radius: 10px;
+      }
+
+      #keyboard {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 80px);
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+      #keyboard > div {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+          rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        border-radius: 10px;
+        font-size: 25px;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #keyboard > div:hover {
+        background-color: teal;
+      }
+
+      .black {
+        background-color: black;
+        color: white;
+      }
+
+      .red {
+        background-color: red;
+        color: white;
+      }
+      #display {
+        font-size: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Calculator📱</h1>
+    <div id="calculator">
+      <div id="display"></div>
+      <div id="keyboard">
+        <div onclick="m1('1')">1</div>
+        <div onclick="m2('2')">2</div>
+        <div onclick="m3('3')">3</div>
+        <div class="black" onclick="add('+')">+</div>
+        <div onclick="m4('4')">4</div>
+        <div onclick="m5('5')">5</div>
+        <div onclick="m6('6')">6</div>
+        <div class="black" onclick="subs('-')">-</div>
+        <div onclick="m7('7')">7</div>
+        <div onclick="m8('8')">8</div>
+        <div onclick="m9('9')">9</div>
+        <div class="black" onclick="mul('*')">*</div>
+        <div class="red" onclick="cls()">C</div>
+        <div onclick="m10('0')">0</div>
+        <div class="black" onclick="calculate()">=</div>
+        <div class="black" onclick="div('/')">/</div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  
+  let display = document.getElementById("display");
+
+  function m1(a) 
+  {
+    let y = document.querySelectorAll("div");
+    display.innerHTML +=a;
+  }
+
+  function m2(a) 
+  {
+    let y = document.querySelectorAll("div");
+    display.innerHTML +=a;
+  }
+
+  function m3(a) 
+  {
+    let y = document.querySelectorAll("div");
+    display.innerHTML +=a;
+  }
+
+  function m4(a) 
+  {
+    let y = document.querySelectorAll("div");
+    display.innerHTML +=a;
+  }
+
+  function m5(a) 
+  {
+    let y = document.querySelectorAll("div");
+    display.innerHTML +=a;
+  }
+
+  function m6(a) 
+  {
+    let y = document.querySelectorAll("div");
+    display.innerHTML +=a;
+  }
+
+  function m7(a) 
+  {
+    let y = document.querySelectorAll("div");
+    display.innerHTML +=a;
+  }
+
+  function m8(a) 
+  {
+    let y = document.querySelectorAll("div");
+    display.innerHTML +=a;
+  }
+
+  function m9(a) 
+  {
+    let y = document.querySelectorAll("div");
+    display.innerHTML +=a;
+  }
+
+  function m10(a) 
+  {
+    let y = document.querySelectorAll("div");
+    display.innerHTML +=a;
+  }
+
+  function add(a) 
+  {
+    let y = document.getElementsByClassName("black");
+    display.innerHTML+=a;
+  }
+
+  function subs(a) 
+  {
+    let y = document.getElementsByClassName("black");
+    display.innerHTML +=a;
+  }
+
+  function mul(a) 
+  {
+    let y = document.getElementsByClassName("black");
+    display.innerHTML +=a;
+  }
+
+  function div(a) 
+  {
+    let y = document.getElementsByClassName("black");
+    display.innerHTML +=a;;
+  }
+  function cls() 
+  {
+ 
+    display.innerHTML = " ";
+  }
+
+ 
+  
+  function calculate() 
+      {
+        let result = eval(display.innerHTML);
+        display.innerHTML = result;  
+      }
+  
+    </script>
+  </body>
+</html> 
+
